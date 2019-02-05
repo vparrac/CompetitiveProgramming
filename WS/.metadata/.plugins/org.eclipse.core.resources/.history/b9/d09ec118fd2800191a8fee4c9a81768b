@@ -1,0 +1,47 @@
+package Week2;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class ChefAndSorting {
+
+	public static void main(String[] args) throws IOException {
+		String rta="";
+		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+		int number=	Integer.parseInt(in.readLine().trim());
+		in.readLine();
+		
+		for (int i = 0; i < number; i++) {
+			String[] line1 = in.readLine().split(" ");
+			ArrayList<Integer> array = new ArrayList<>();
+			for (int j = 0; j < line1.length; j++) {
+				array.add(Integer.parseInt(line1[j]));
+			} 
+			int movements=-1;
+			int max=array.get(0);
+			int number2=0;
+
+			while(number2!=array.size()) {
+				movements++;
+				number2=0;
+				movements++;
+				for (int j = 0; j < array.size(); j++) {				
+					if(array.get(j)>=max) {						
+						max=j;
+						number2++;
+					}										
+				}
+				if(number2!=array.size()) {
+					int maxN= array.get(max);
+					array.remove(max);
+					array.add(maxN);
+				}
+			}
+			rta+=movements+"\n";			
+		}
+		System.out.println(rta);
+	}
+}

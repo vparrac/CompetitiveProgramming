@@ -1,0 +1,30 @@
+package Week2;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class ClassE {
+
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+		int l= Integer.parseInt(in.readLine());
+		String[] n;
+		int m=0;
+		int k=0;
+		for (int i = 0; i < l; i++) {
+			n=in.readLine().split(" ");
+			k=0;
+			for (int j = 0; j < n.length; j++) {
+				if(n[i].equals("1")) {
+					k++;
+					if(k==2) {
+							
+					}
+				}
+			}
+		}
+	}
+
+}

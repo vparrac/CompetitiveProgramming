@@ -1,0 +1,7 @@
+package Week2;
+
+public class RightLeftCipher {
+public static void main(String[] args) {
+	
+}
+}

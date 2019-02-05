@@ -1,0 +1,29 @@
+package Week2;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class MinimizingTheString {
+	public static void main(String[] args) throws IOException {
+		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+		in.readLine();
+		char[] line =  in.readLine().toCharArray();
+		StringBuilder sb= new StringBuilder();		
+		sb.append(line);
+		int i =0;
+		if(line.length>1) {
+			for ( i = 0; i < line.length-1; i++) {
+				if(line[i]>line[i+1]) {
+					sb.deleteCharAt(i);
+					break;
+				}
+			}
+			if(i==line.length-1) {
+				sb.deleteCharAt(sb.length()-1);
+			}
+			
+		}
+		System.out.println(sb);
+	}
+}

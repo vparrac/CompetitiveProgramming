@@ -1,0 +1,18 @@
+package Week2;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class MinimizingTheString {
+	public static void main(String[] args) throws IOException {
+		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+		char[] line =  in.readLine().toCharArray();
+		char min=line[0];
+		if(line.length>1) {
+			for (int i = 0; i < line.length-1; i++) {
+				if()
+			}
+		}
+	}
+}
